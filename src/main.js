@@ -117,6 +117,30 @@ async function initializeApp() {
       // Continue initialization - navigation failure shouldn't block app
     }
 
+    // Initialize hero section module
+    try {
+      const { initHero } = await import('@/scripts/hero.js');
+      const heroContainer = document.querySelector('.hero');
+      
+      if (heroContainer) {
+        await initHero(heroContainer);
+        logger.info('Hero section initialized successfully');
+      } else {
+        logger.warn('Hero container not found in DOM', {
+          module: 'hero',
+        });
+      }
+    } catch (error) {
+      logger.error(
+        'Hero section initialization failed',
+        error instanceof Error ? error : new Error(String(error)),
+        {
+          module: 'hero',
+        }
+      );
+      // Continue initialization - hero failure shouldn't block app
+    }
+
     // Future module imports will be added here
     // Example structure for future components:
     // const { initHeader } = await import('@/scripts/components/header.js');
