@@ -141,6 +141,30 @@ async function initializeApp() {
       // Continue initialization - hero failure shouldn't block app
     }
 
+    // Initialize categories section module
+    try {
+      const { initCategories } = await import('@/scripts/categories.js');
+      const categoriesContainer = document.querySelector('#categories-grid');
+      
+      if (categoriesContainer) {
+        await initCategories('#categories-grid');
+        logger.info('Categories section initialized successfully');
+      } else {
+        logger.warn('Categories container not found in DOM', {
+          module: 'categories',
+        });
+      }
+    } catch (error) {
+      logger.error(
+        'Categories section initialization failed',
+        error instanceof Error ? error : new Error(String(error)),
+        {
+          module: 'categories',
+        }
+      );
+      // Continue initialization - categories failure shouldn't block app
+    }
+
     // Future module imports will be added here
     // Example structure for future components:
     // const { initHeader } = await import('@/scripts/components/header.js');

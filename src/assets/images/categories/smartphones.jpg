@@ -1,0 +1,9 @@
+# Using ImageMagick
+   convert src/assets/images/categories/smartphones.webp -resize 600x400 -quality 85 src/assets/images/categories/smartphones.jpg
+   
+   # Using cwebp (if you have it)
+   dwebp src/assets/images/categories/smartphones.webp -o temp.png
+   convert temp.png -resize 600x400 -quality 85 src/assets/images/categories/smartphones.jpg
+   
+   # Using online tools
+   # Upload to: squoosh.app, tinyjpg.com, or cloudconvert.com

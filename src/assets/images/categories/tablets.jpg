@@ -1,0 +1,1 @@
+convert source-image.jpg -resize 600x400^ -gravity center -extent 600x400 -quality 85 src/assets/images/categories/tablets.jpg
