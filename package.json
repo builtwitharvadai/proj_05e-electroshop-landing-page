@@ -1,0 +1,25 @@
+{
+  "name": "electroshop-landing-page",
+  "version": "1.0.0",
+  "description": "Modern landing page for ElectroShop with Vite build system",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.{js,css,html,json,md}\""
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "eslint": "^9.0.0",
+    "@eslint/js": "^9.0.0",
+    "prettier": "^3.1.0",
+    "postcss": "^8.4.32",
+    "autoprefixer": "^10.4.16"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
