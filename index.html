@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Character encoding MUST be first -->
+    <meta charset="UTF-8" />
+
+    <!-- Viewport for responsive design -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <!-- Document title with site name -->
+    <title>
+      ElectroShop - Premium Electronics & Smart Devices | Best Deals Online
+    </title>
+
+    <!-- Meta descriptions for SEO -->
+    <meta
+      name="description"
+      content="Discover premium electronics, smart devices, and cutting-edge technology at ElectroShop. Shop the latest gadgets with fast shipping and unbeatable prices."
+    />
+
+    <!-- Open Graph for social media -->
+    <meta
+      property="og:title"
+      content="ElectroShop - Premium Electronics & Smart Devices"
+    />
+    <meta
+      property="og:description"
+      content="Discover premium electronics, smart devices, and cutting-edge technology at ElectroShop. Shop the latest gadgets with fast shipping and unbeatable prices."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://electroshop.example.com" />
+    <meta
+      property="og:image"
+      content="https://electroshop.example.com/og-image.jpg"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="ElectroShop - Premium Electronics & Smart Devices"
+    />
+    <meta
+      name="twitter:description"
+      content="Discover premium electronics, smart devices, and cutting-edge technology at ElectroShop."
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://electroshop.example.com" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Theme color -->
+    <meta
+      name="theme-color"
+      content="#3b82f6"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#1e3a8a"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- DNS prefetch for performance -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  </head>
+  <body>
+    <!-- Skip navigation for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Semantic header -->
+    <header role="banner">
+      <nav role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="/" aria-label="ElectroShop Home">
+              <span class="logo-text">ElectroShop</span>
+            </a>
+          </div>
+
+          <ul role="list" class="nav-menu">
+            <li><a href="/" aria-current="page">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <button
+              type="button"
+              class="btn-secondary"
+              aria-label="Open shopping cart"
+            >
+              Cart
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main content with landmark -->
+    <main id="main" role="main">
+      <!-- Hero Section -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <h1 id="hero-title">
+            Discover the Future of Electronics
+          </h1>
+          <p class="hero-description">
+            Premium smart devices and cutting-edge technology at unbeatable
+            prices. Experience innovation delivered to your doorstep.
+          </p>
+          <div class="hero-actions">
+            <a href="#products" class="btn-primary">Shop Now</a>
+            <a href="#features" class="btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products Section -->
+      <section id="products" aria-labelledby="products-title">
+        <div class="section-container">
+          <header class="section-header">
+            <h2 id="products-title">Featured Products</h2>
+            <p class="section-description">
+              Explore our curated selection of premium electronics
+            </p>
+          </header>
+
+          <div class="products-grid" role="list">
+            <!-- Product cards will be dynamically loaded -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" aria-labelledby="features-title">
+        <div class="section-container">
+          <header class="section-header">
+            <h2 id="features-title">Why Choose ElectroShop</h2>
+            <p class="section-description">
+              Experience excellence in every aspect of your shopping journey
+            </p>
+          </header>
+
+          <div class="features-grid" role="list">
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">
+                <span>🚚</span>
+              </div>
+              <h3>Fast Shipping</h3>
+              <p>Free delivery on orders over $50. Get your products in 2-3 business days.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">
+                <span>🔒</span>
+              </div>
+              <h3>Secure Payment</h3>
+              <p>Shop with confidence using our encrypted payment system.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">
+                <span>⭐</span>
+              </div>
+              <h3>Quality Guarantee</h3>
+              <p>All products come with manufacturer warranty and our satisfaction guarantee.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">
+                <span>💬</span>
+              </div>
+              <h3>24/7 Support</h3>
+              <p>Our customer service team is always ready to help you.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" aria-labelledby="about-title">
+        <div class="section-container">
+          <header class="section-header">
+            <h2 id="about-title">About ElectroShop</h2>
+          </header>
+
+          <div class="about-content">
+            <p>
+              ElectroShop is your trusted destination for premium electronics
+              and smart devices. We curate the latest technology from leading
+              brands to bring you innovation, quality, and value.
+            </p>
+            <p>
+              With years of experience in the electronics industry, we
+              understand what matters most to our customers: reliability,
+              performance, and exceptional service.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" aria-labelledby="contact-title">
+        <div class="section-container">
+          <header class="section-header">
+            <h2 id="contact-title">Get In Touch</h2>
+            <p class="section-description">
+              Have questions? We'd love to hear from you.
+            </p>
+          </header>
+
+          <form
+            method="POST"
+            action="/api/contact"
+            class="contact-form"
+            novalidate
+          >
+            <div class="form-group">
+              <label for="name">
+                Name
+                <span aria-label="required">*</span>
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                aria-required="true"
+                aria-invalid="false"
+                autocomplete="name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">
+                Email
+                <span aria-label="required">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                aria-required="true"
+                aria-invalid="false"
+                autocomplete="email"
+                inputmode="email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">
+                Message
+                <span aria-label="required">*</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                aria-required="true"
+                aria-invalid="false"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Semantic footer -->
+    <footer role="contentinfo">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>ElectroShop</h3>
+            <p>Your trusted source for premium electronics and smart devices.</p>
+          </div>
+
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul role="list">
+              <li><a href="#products">Products</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Customer Service</h4>
+            <ul role="list">
+              <li><a href="/shipping">Shipping Info</a></li>
+              <li><a href="/returns">Returns</a></li>
+              <li><a href="/warranty">Warranty</a></li>
+              <li><a href="/faq">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Legal</h4>
+            <ul role="list">
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms of Service</a></li>
+              <li><a href="/cookies">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 ElectroShop. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Vite script integration -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
