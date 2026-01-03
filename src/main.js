@@ -165,6 +165,38 @@ async function initializeApp() {
       // Continue initialization - categories failure shouldn't block app
     }
 
+    // Initialize store information module
+    try {
+      const { initStoreInfo } = await import('@/scripts/store-info.js');
+      await initStoreInfo();
+      logger.info('Store information module initialized successfully');
+    } catch (error) {
+      logger.error(
+        'Store information module initialization failed',
+        error instanceof Error ? error : new Error(String(error)),
+        {
+          module: 'store-info',
+        }
+      );
+      // Continue initialization - store info failure shouldn't block app
+    }
+
+    // Initialize contact form module
+    try {
+      const { initContactForm } = await import('@/scripts/contact-form.js');
+      await initContactForm();
+      logger.info('Contact form module initialized successfully');
+    } catch (error) {
+      logger.error(
+        'Contact form module initialization failed',
+        error instanceof Error ? error : new Error(String(error)),
+        {
+          module: 'contact-form',
+        }
+      );
+      // Continue initialization - contact form failure shouldn't block app
+    }
+
     // Future module imports will be added here
     // Example structure for future components:
     // const { initHeader } = await import('@/scripts/components/header.js');

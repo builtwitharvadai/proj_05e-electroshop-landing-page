@@ -1,0 +1,626 @@
+/* ========================================
+   Store Information Section Styles
+   ElectroShop Landing Page
+   ======================================== */
+
+/* ========================================
+   Store Info Container
+   ======================================== */
+
+.store-info {
+  padding-block: var(--space-fluid-3xl);
+  padding-inline: var(--space-fluid-md);
+  background-color: var(--color-background-secondary);
+  container-type: inline-size;
+  container-name: store-info;
+}
+
+.store-info__container {
+  max-width: var(--container-xl);
+  margin-inline: auto;
+}
+
+/* ========================================
+   Section Header
+   ======================================== */
+
+.store-info__header {
+  text-align: center;
+  margin-block-end: var(--space-fluid-2xl);
+}
+
+.store-info__title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-text-primary);
+  margin-block-end: var(--space-4);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.store-info__subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  max-width: 60ch;
+  margin-inline: auto;
+  line-height: var(--line-height-relaxed);
+}
+
+/* ========================================
+   Grid Layout
+   ======================================== */
+
+.store-info__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-fluid-xl);
+  margin-block-end: var(--space-fluid-2xl);
+}
+
+@container store-info (width >= 768px) {
+  .store-info__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@container store-info (width >= 1024px) {
+  .store-info__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ========================================
+   Info Cards
+   ======================================== */
+
+.store-info__card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-duration-base) var(--transition-timing-ease);
+  border: 1px solid var(--color-border-light);
+}
+
+.store-info__card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.store-info__card-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-600));
+  border-radius: var(--radius-lg);
+  margin-block-end: var(--space-4);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-2xl);
+}
+
+.store-info__card-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-block-end: var(--space-3);
+}
+
+.store-info__card-content {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* ========================================
+   Business Hours
+   ======================================== */
+
+.store-info__hours-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.store-info__hours-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: var(--space-2);
+  border-block-end: 1px solid var(--color-border-light);
+}
+
+.store-info__hours-item:last-child {
+  border-block-end: none;
+}
+
+.store-info__hours-day {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.store-info__hours-time {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.store-info__status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  margin-block-start: var(--space-4);
+}
+
+.store-info__status--open {
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.store-info__status--closed {
+  background-color: var(--color-error-light);
+  color: var(--color-error);
+}
+
+.store-info__status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background-color: currentColor;
+}
+
+/* ========================================
+   Contact Methods
+   ======================================== */
+
+.store-info__contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.store-info__contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.store-info__contact-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-primary-600);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: color var(--transition-duration-fast) var(--transition-timing-ease);
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+}
+
+.store-info__contact-link:hover {
+  color: var(--color-primary-700);
+  background-color: var(--color-primary-50);
+}
+
+.store-info__contact-link:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+.store-info__contact-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ========================================
+   Map Section
+   ======================================== */
+
+.store-info__map-section {
+  margin-block-start: var(--space-fluid-2xl);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border-light);
+}
+
+.store-info__map-header {
+  padding: var(--space-6);
+  border-block-end: 1px solid var(--color-border-light);
+}
+
+.store-info__map-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-block-end: var(--space-2);
+}
+
+.store-info__map-address {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.store-info__map-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: var(--color-neutral-100);
+}
+
+.store-info__map-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* ========================================
+   Contact Form
+   ======================================== */
+
+.store-info__form-section {
+  margin-block-start: var(--space-fluid-2xl);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border-light);
+}
+
+.store-info__form-header {
+  text-align: center;
+  margin-block-end: var(--space-8);
+}
+
+.store-info__form-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-block-end: var(--space-3);
+}
+
+.store-info__form-description {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.store-info__form {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@container store-info (width >= 768px) {
+  .store-info__form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .store-info__form-group--full {
+    grid-column: 1 / -1;
+  }
+}
+
+.store-info__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.store-info__form-label {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+}
+
+.store-info__form-label--required::after {
+  content: ' *';
+  color: var(--color-error);
+}
+
+.store-info__form-input,
+.store-info__form-textarea {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  transition: all var(--transition-duration-fast) var(--transition-timing-ease);
+}
+
+.store-info__form-input:hover,
+.store-info__form-textarea:hover {
+  border-color: var(--color-border-dark);
+}
+
+.store-info__form-input:focus,
+.store-info__form-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px var(--color-primary-100);
+}
+
+.store-info__form-input::placeholder,
+.store-info__form-textarea::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.store-info__form-textarea {
+  min-height: 150px;
+  resize: vertical;
+  line-height: var(--line-height-relaxed);
+}
+
+/* Form Validation States */
+.store-info__form-input--error,
+.store-info__form-textarea--error {
+  border-color: var(--color-error);
+}
+
+.store-info__form-input--error:focus,
+.store-info__form-textarea--error:focus {
+  box-shadow: 0 0 0 3px var(--color-error-light);
+}
+
+.store-info__form-input--success,
+.store-info__form-textarea--success {
+  border-color: var(--color-success);
+}
+
+.store-info__form-input--success:focus,
+.store-info__form-textarea--success:focus {
+  box-shadow: 0 0 0 3px var(--color-success-light);
+}
+
+.store-info__form-error {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-error);
+  font-size: var(--font-size-sm);
+  margin-block-start: var(--space-1);
+}
+
+.store-info__form-error-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* ========================================
+   Form Submit Button
+   ======================================== */
+
+.store-info__form-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-8);
+  background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-600));
+  color: var(--color-text-inverse);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all var(--transition-duration-base) var(--transition-timing-ease);
+  box-shadow: var(--shadow-sm);
+}
+
+.store-info__form-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.store-info__form-submit:active {
+  transform: translateY(0);
+}
+
+.store-info__form-submit:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+.store-info__form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.store-info__form-submit-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* ========================================
+   Form Success/Error Messages
+   ======================================== */
+
+.store-info__form-message {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-block-start: var(--space-4);
+}
+
+.store-info__form-message--success {
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+  border: 1px solid var(--color-success);
+}
+
+.store-info__form-message--error {
+  background-color: var(--color-error-light);
+  color: var(--color-error);
+  border: 1px solid var(--color-error);
+}
+
+.store-info__form-message-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ========================================
+   Company Overview
+   ======================================== */
+
+.store-info__overview {
+  margin-block-start: var(--space-fluid-2xl);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border-light);
+}
+
+.store-info__overview-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-block-end: var(--space-4);
+}
+
+.store-info__overview-content {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-block-end: var(--space-6);
+}
+
+.store-info__trust-indicators {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+  margin-block-start: var(--space-6);
+  padding-block-start: var(--space-6);
+  border-block-start: 1px solid var(--color-border-light);
+}
+
+.store-info__trust-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.store-info__trust-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-accent-600);
+  flex-shrink: 0;
+}
+
+.store-info__trust-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ========================================
+   Loading State
+   ======================================== */
+
+.store-info__form-submit--loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.store-info__form-submit--loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-text-inverse);
+  border-top-color: transparent;
+  border-radius: var(--radius-full);
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   Responsive Adjustments
+   ======================================== */
+
+@media (width >= 768px) {
+  .store-info__map-container {
+    height: 500px;
+  }
+}
+
+@media (width >= 1024px) {
+  .store-info__map-container {
+    height: 600px;
+  }
+}
+
+/* ========================================
+   Print Styles
+   ======================================== */
+
+@media print {
+  .store-info__form-section {
+    display: none;
+  }
+  
+  .store-info__map-container {
+    height: 400px;
+    page-break-inside: avoid;
+  }
+  
+  .store-info__card {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+}
+
+/* ========================================
+   Reduced Motion Support
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .store-info__card,
+  .store-info__form-submit,
+  .store-info__contact-link {
+    transition: none;
+  }
+  
+  .store-info__form-submit--loading::after {
+    animation: none;
+  }
+}
+
+/* ========================================
+   High Contrast Mode
+   ======================================== */
+
+@media (prefers-contrast: high) {
+  .store-info__card,
+  .store-info__map-section,
+  .store-info__form-section,
+  .store-info__overview {
+    border-width: 2px;
+  }
+  
+  .store-info__form-input:focus,
+  .store-info__form-textarea:focus {
+    outline: 3px solid currentColor;
+  }
+}
