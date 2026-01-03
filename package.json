@@ -9,7 +9,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "format": "prettier --write \"**/*.{js,css,html,json,md}\""
+    "format": "prettier --write \"**/*.{js,css,html,json,md}\"",
+    "test:performance": "node scripts/performance-test.js",
+    "test:seo": "node scripts/seo-validation.js",
+    "analyze": "vite build --mode analyze"
   },
   "devDependencies": {
     "vite": "^5.0.0",
@@ -17,7 +20,11 @@
     "@eslint/js": "^9.0.0",
     "prettier": "^3.1.0",
     "postcss": "^8.4.32",
-    "autoprefixer": "^10.4.16"
+    "autoprefixer": "^10.4.16",
+    "lighthouse": "^11.4.0",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "vite-plugin-compression": "^0.5.1",
+    "terser": "^5.26.0"
   },
   "engines": {
     "node": ">=18.0.0"

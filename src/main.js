@@ -101,6 +101,56 @@ async function initializeApp() {
       });
     }
 
+    // Initialize performance monitoring module
+    try {
+      const { initPerformanceMonitoring } = await import('@/scripts/performance.js');
+      await initPerformanceMonitoring({
+        reportingEnabled: config.environment === 'production',
+      });
+      logger.info('Performance monitoring initialized successfully');
+    } catch (error) {
+      logger.error(
+        'Performance monitoring initialization failed',
+        error instanceof Error ? error : new Error(String(error)),
+        {
+          module: 'performance',
+        }
+      );
+      // Continue initialization - performance monitoring failure shouldn't block app
+    }
+
+    // Initialize lazy loading module
+    try {
+      const { initLazyLoading } = await import('@/scripts/lazy-loading.js');
+      await initLazyLoading('body');
+      logger.info('Lazy loading initialized successfully');
+    } catch (error) {
+      logger.error(
+        'Lazy loading initialization failed',
+        error instanceof Error ? error : new Error(String(error)),
+        {
+          module: 'lazy-loading',
+        }
+      );
+      // Continue initialization - lazy loading failure shouldn't block app
+    }
+
+    // Initialize SEO module
+    try {
+      const { initializeSEO } = await import('@/scripts/seo.js');
+      await initializeSEO();
+      logger.info('SEO module initialized successfully');
+    } catch (error) {
+      logger.error(
+        'SEO module initialization failed',
+        error instanceof Error ? error : new Error(String(error)),
+        {
+          module: 'seo',
+        }
+      );
+      // Continue initialization - SEO failure shouldn't block app
+    }
+
     // Initialize navigation module
     try {
       const { initializeNavigation } = await import('@/scripts/navigation.js');
