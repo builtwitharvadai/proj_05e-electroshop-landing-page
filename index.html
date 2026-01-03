@@ -126,17 +126,206 @@
     <main id="main" role="main">
       <!-- Hero Section -->
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-content">
-          <h1 id="hero-title">
-            Discover the Future of Electronics
-          </h1>
-          <p class="hero-description">
-            Premium smart devices and cutting-edge technology at unbeatable
-            prices. Experience innovation delivered to your doorstep.
-          </p>
-          <div class="hero-actions">
-            <a href="#products" class="btn-primary">Shop Now</a>
-            <a href="#features" class="btn-secondary">Learn More</a>
+        <div class="hero__container">
+          <header class="hero__header">
+            <h1 id="hero-title">
+              Discover the Future of Electronics
+            </h1>
+            <p class="hero__subtitle">
+              Premium smart devices and cutting-edge technology at unbeatable
+              prices. Experience innovation delivered to your doorstep.
+            </p>
+          </header>
+
+          <div class="hero__products" role="list">
+            <!-- Product Card 1: ProPhone X1 Ultra -->
+            <article class="product-card" data-product-id="smartphone-pro-x1" aria-label="ProPhone X1 Ultra product card">
+              <div class="product-card__image-wrapper">
+                <picture>
+                  <source
+                    type="image/webp"
+                    data-srcset="/assets/images/products/smartphone-hero.webp"
+                  />
+                  <img
+                    data-src="/assets/images/products/smartphone-hero.jpg"
+                    alt="ProPhone X1 Ultra smartphone with stunning OLED display showing vibrant colors"
+                    class="product-card__image"
+                    loading="lazy"
+                    decoding="async"
+                    data-product-id="smartphone-pro-x1"
+                    data-product-name="ProPhone X1 Ultra"
+                  />
+                </picture>
+                <span class="product-card__badge">Featured</span>
+              </div>
+
+              <div class="product-card__content">
+                <span class="product-card__category">Smartphones</span>
+                <h3 class="product-card__title">ProPhone X1 Ultra</h3>
+                <p class="product-card__description">
+                  Experience cutting-edge mobile technology with the ProPhone X1 Ultra. Featuring a stunning 6.7-inch OLED display, advanced AI-powered camera system, and lightning-fast 5G connectivity for seamless performance.
+                </p>
+
+                <ul class="product-card__specs" aria-label="Product specifications">
+                  <li class="product-card__spec">
+                    <span class="product-card__spec-label">Display:</span>
+                    <span class="product-card__spec-value">6.7" OLED, 120Hz</span>
+                  </li>
+                  <li class="product-card__spec">
+                    <span class="product-card__spec-label">Processor:</span>
+                    <span class="product-card__spec-value">Octa-core 3.2GHz</span>
+                  </li>
+                  <li class="product-card__spec">
+                    <span class="product-card__spec-label">Camera:</span>
+                    <span class="product-card__spec-value">108MP Triple Camera</span>
+                  </li>
+                  <li class="product-card__spec">
+                    <span class="product-card__spec-label">Battery:</span>
+                    <span class="product-card__spec-value">5000mAh Fast Charging</span>
+                  </li>
+                </ul>
+
+                <div class="product-card__footer">
+                  <div class="product-card__price-wrapper">
+                    <span class="product-card__price-label">Starting at</span>
+                    <span class="product-card__price" aria-label="Price: $999.99">$999.99</span>
+                  </div>
+                  <a
+                    href="/products/smartphone-pro-x1"
+                    class="product-card__cta"
+                    aria-label="Explore ProPhone X1 - ProPhone X1 Ultra"
+                  >
+                    Explore ProPhone X1
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 2: PowerBook Pro 15 -->
+            <article class="product-card" data-product-id="laptop-powerbook-15" aria-label="PowerBook Pro 15 product card">
+              <div class="product-card__image-wrapper">
+                <picture>
+                  <source
+                    type="image/webp"
+                    data-srcset="/assets/images/products/laptop-hero.webp"
+                  />
+                  <img
+                    data-src="/assets/images/products/laptop-hero.jpg"
+                    alt="PowerBook Pro 15 laptop with 4K display showing professional workspace"
+                    class="product-card__image"
+                    loading="lazy"
+                    decoding="async"
+                    data-product-id="laptop-powerbook-15"
+                    data-product-name="PowerBook Pro 15"
+                  />
+                </picture>
+                <span class="product-card__badge">Featured</span>
+              </div>
+
+              <div class="product-card__content">
+                <span class="product-card__category">Laptops</span>
+                <h3 class="product-card__title">PowerBook Pro 15</h3>
+                <p class="product-card__description">
+                  Unleash your productivity with the PowerBook Pro 15. Engineered for professionals and creators, featuring a brilliant 15.6-inch 4K display, powerful multi-core processor, and all-day battery life in a sleek aluminum chassis.
+                </p>
+
+                <ul class="product-card__specs" aria-label="Product specifications">
+                  <li class="product-card__spec">
+                    <span class="product-card__spec-label">Display:</span>
+                    <span class="product-card__spec-value">15.6" 4K IPS, 100% sRGB</span>
+                  </li>
+                  <li class="product-card__spec">
+                    <span class="product-card__spec-label">Processor:</span>
+                    <span class="product-card__spec-value">Intel Core i9 / AMD Ryzen 9</span>
+                  </li>
+                  <li class="product-card__spec">
+                    <span class="product-card__spec-label">Graphics:</span>
+                    <span class="product-card__spec-value">Dedicated GPU 8GB VRAM</span>
+                  </li>
+                  <li class="product-card__spec">
+                    <span class="product-card__spec-label">Memory:</span>
+                    <span class="product-card__spec-value">32GB DDR5 RAM</span>
+                  </li>
+                </ul>
+
+                <div class="product-card__footer">
+                  <div class="product-card__price-wrapper">
+                    <span class="product-card__price-label">Starting at</span>
+                    <span class="product-card__price" aria-label="Price: $1,799.99">$1,799.99</span>
+                  </div>
+                  <a
+                    href="/products/laptop-powerbook-15"
+                    class="product-card__cta"
+                    aria-label="Discover PowerBook Pro - PowerBook Pro 15"
+                  >
+                    Discover PowerBook Pro
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 3: SoundMax Pro Wireless -->
+            <article class="product-card" data-product-id="headphones-soundmax-pro" aria-label="SoundMax Pro Wireless product card">
+              <div class="product-card__image-wrapper">
+                <picture>
+                  <source
+                    type="image/webp"
+                    data-srcset="/assets/images/products/headphones-hero.webp"
+                  />
+                  <img
+                    data-src="/assets/images/products/headphones-hero.jpg"
+                    alt="SoundMax Pro Wireless headphones with premium design and cushioned ear cups"
+                    class="product-card__image"
+                    loading="lazy"
+                    decoding="async"
+                    data-product-id="headphones-soundmax-pro"
+                    data-product-name="SoundMax Pro Wireless"
+                  />
+                </picture>
+                <span class="product-card__badge">Featured</span>
+              </div>
+
+              <div class="product-card__content">
+                <span class="product-card__category">Audio</span>
+                <h3 class="product-card__title">SoundMax Pro Wireless</h3>
+                <p class="product-card__description">
+                  Immerse yourself in premium audio with SoundMax Pro Wireless headphones. Industry-leading active noise cancellation, studio-quality sound, and luxurious comfort for extended listening sessions.
+                </p>
+
+                <ul class="product-card__specs" aria-label="Product specifications">
+                  <li class="product-card__spec">
+                    <span class="product-card__spec-label">Audio:</span>
+                    <span class="product-card__spec-value">Hi-Res Audio, 40mm Drivers</span>
+                  </li>
+                  <li class="product-card__spec">
+                    <span class="product-card__spec-label">Noise Cancellation:</span>
+                    <span class="product-card__spec-value">Adaptive ANC</span>
+                  </li>
+                  <li class="product-card__spec">
+                    <span class="product-card__spec-label">Battery Life:</span>
+                    <span class="product-card__spec-value">Up to 30 hours</span>
+                  </li>
+                  <li class="product-card__spec">
+                    <span class="product-card__spec-label">Connectivity:</span>
+                    <span class="product-card__spec-value">Bluetooth 5.2, Multi-point</span>
+                  </li>
+                </ul>
+
+                <div class="product-card__footer">
+                  <div class="product-card__price-wrapper">
+                    <span class="product-card__price-label">Starting at</span>
+                    <span class="product-card__price" aria-label="Price: $349.99">$349.99</span>
+                  </div>
+                  <a
+                    href="/products/headphones-soundmax-pro"
+                    class="product-card__cta"
+                    aria-label="Experience SoundMax Pro - SoundMax Pro Wireless"
+                  >
+                    Experience SoundMax Pro
+                  </a>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
