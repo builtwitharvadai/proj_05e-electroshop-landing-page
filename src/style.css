@@ -13,6 +13,8 @@
 
 /* Component Styles */
 @import './styles/components/navigation.css';
+@import './styles/components/hero.css';
+@import './styles/components/product-card.css';
 
 /* Layout Styles */
 @import './styles/layout/header.css';
