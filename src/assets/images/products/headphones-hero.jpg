@@ -1,0 +1,10 @@
+# Using ImageMagick
+   convert input.jpg -resize 1200x800^ -gravity center -extent 1200x800 -quality 85 headphones-hero.jpg
+   
+   # Using Sharp (Node.js)
+   npx sharp-cli resize 1200 800 --fit cover --quality 85 input.jpg -o headphones-hero.jpg
+   
+   # Online tools
+   # - TinyJPG.com
+   # - Squoosh.app
+   # - ImageOptim (Mac)

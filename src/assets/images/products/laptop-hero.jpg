@@ -1,0 +1,3 @@
+# Example using Sharp CLI
+   npx sharp-cli resize 1200 800 --input source.jpg --output laptop-hero.jpg
+   npx sharp-cli optimize --quality 85 --input laptop-hero.jpg --output laptop-hero.jpg
