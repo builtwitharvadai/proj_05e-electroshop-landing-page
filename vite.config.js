@@ -1,5 +1,7 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
+import { visualizer } from 'rollup-plugin-visualizer';
+import viteCompression from 'vite-plugin-compression';
 
 export default defineConfig({
   root: '.',
@@ -32,6 +34,11 @@ export default defineConfig({
         },
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js',
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        },
       },
     },
     
@@ -45,9 +52,13 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info'],
+        passes: 2,
       },
       format: {
         comments: false,
+      },
+      mangle: {
+        safari10: true,
       },
     },
     
@@ -55,6 +66,8 @@ export default defineConfig({
     chunkSizeWarningLimit: 500,
     
     sourcemap: false,
+    
+    target: 'es2020',
   },
   
   server: {
@@ -104,4 +117,25 @@ export default defineConfig({
   
   logLevel: 'info',
   clearScreen: true,
+  
+  plugins: [
+    viteCompression({
+      algorithm: 'gzip',
+      ext: '.gz',
+      threshold: 10240,
+      deleteOriginFile: false,
+    }),
+    viteCompression({
+      algorithm: 'brotliCompress',
+      ext: '.br',
+      threshold: 10240,
+      deleteOriginFile: false,
+    }),
+    visualizer({
+      filename: './dist/stats.html',
+      open: false,
+      gzipSize: true,
+      brotliSize: true,
+    }),
+  ],
 });
