@@ -16,6 +16,8 @@
 @import './styles/components/hero.css';
 @import './styles/components/product-card.css';
 @import './styles/components/categories.css';
+@import './styles/components/store-info.css';
+@import './styles/components/contact-form.css';
 
 /* Layout Styles */
 @import './styles/layout/header.css';
