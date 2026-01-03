@@ -1,0 +1,5 @@
+# Using ImageMagick
+   convert original.jpg -resize 1200x800^ -gravity center -extent 1200x800 -quality 85 smartphone-hero.jpg
+   
+   # Or using sharp-cli
+   npx sharp-cli -i original.jpg -o smartphone-hero.jpg resize 1200 800 --fit cover --quality 85
