@@ -3,6 +3,21 @@
    ======================================== */
 
 /* ========================================
+   Import Order: Base → Components → Layout
+   ======================================== */
+
+/* Base Styles - Foundation */
+@import './styles/base/reset.css';
+@import './styles/base/variables.css';
+@import './styles/base/typography.css';
+
+/* Component Styles */
+@import './styles/components/navigation.css';
+
+/* Layout Styles */
+@import './styles/layout/header.css';
+
+/* ========================================
    CSS Custom Properties (Design Tokens)
    ======================================== */
 :root {

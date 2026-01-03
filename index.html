@@ -78,34 +78,48 @@
     <a href="#main" class="skip-link">Skip to main content</a>
 
     <!-- Semantic header -->
-    <header role="banner">
-      <nav role="navigation" aria-label="Main navigation">
-        <div class="nav-container">
-          <div class="logo">
-            <a href="/" aria-label="ElectroShop Home">
-              <span class="logo-text">ElectroShop</span>
-            </a>
-          </div>
+    <header role="banner" class="header">
+      <div class="header__container">
+        <div class="header__logo-wrapper">
+          <a href="/" aria-label="ElectroShop Home">
+            <span class="logo-text">ElectroShop</span>
+          </a>
+        </div>
 
-          <ul role="list" class="nav-menu">
-            <li><a href="/" aria-current="page">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-
-          <div class="nav-actions">
+        <div class="header__navigation-wrapper">
+          <nav role="navigation" aria-label="Main navigation" class="navigation">
             <button
               type="button"
-              class="btn-secondary"
-              aria-label="Open shopping cart"
+              class="navigation__toggle"
+              aria-expanded="false"
+              aria-controls="navigation-menu"
+              aria-label="Toggle navigation menu"
             >
-              Cart
+              <span class="navigation__toggle-icon" aria-hidden="true"></span>
             </button>
-          </div>
+
+            <ul role="list" class="navigation__menu" id="navigation-menu" data-state="closed">
+              <li><a href="/" class="navigation__link" aria-current="page">Home</a></li>
+              <li><a href="#products" class="navigation__link">Products</a></li>
+              <li><a href="#features" class="navigation__link">Features</a></li>
+              <li><a href="#about" class="navigation__link">About</a></li>
+              <li><a href="#contact" class="navigation__link">Contact</a></li>
+            </ul>
+
+            <div class="navigation__overlay" data-state="closed" aria-hidden="true"></div>
+
+            <div class="nav-actions">
+              <button
+                type="button"
+                class="btn-secondary"
+                aria-label="Open shopping cart"
+              >
+                Cart
+              </button>
+            </div>
+          </nav>
         </div>
-      </nav>
+      </div>
     </header>
 
     <!-- Main content with landmark -->

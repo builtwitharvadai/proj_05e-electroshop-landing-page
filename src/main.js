@@ -101,6 +101,22 @@ async function initializeApp() {
       });
     }
 
+    // Initialize navigation module
+    try {
+      const { initializeNavigation } = await import('@/scripts/navigation.js');
+      await initializeNavigation();
+      logger.info('Navigation module initialized successfully');
+    } catch (error) {
+      logger.error(
+        'Navigation module initialization failed',
+        error instanceof Error ? error : new Error(String(error)),
+        {
+          module: 'navigation',
+        }
+      );
+      // Continue initialization - navigation failure shouldn't block app
+    }
+
     // Future module imports will be added here
     // Example structure for future components:
     // const { initHeader } = await import('@/scripts/components/header.js');
